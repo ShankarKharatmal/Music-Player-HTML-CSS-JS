@@ -1,0 +1,238 @@
+body {
+    /* background: linear-gradient(rgb(0, 255, 162) , rgb(255, 0, 247)); */
+    /* background-image: url(download.jfif); */
+    background-color:#020D19;
+    /* Smoothly transition the background color */
+    /* transition: background-color .5s; */
+    }
+    
+    /* Using flex with the column direction to
+    align items in a vertical direction */
+    .player {
+    margin: 2.2% auto;
+    
+    height: 50%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    border: solid rgba(255, 255, 255, 0.463) 5PX;
+    box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.73);
+    border-radius: 10PX;
+    background-color: rgba(255, 255, 255, 0.071);
+    }
+    
+    .details {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 25px;
+    }
+    
+    .track-art {
+    margin: 25px;
+    height: 250px;
+    width: 250px;
+    background-image: URL(
+        "https://source.unsplash.com/Qrspubmx6kE/640x360");
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.73);
+    }
+    
+    /* Changing the font sizes to suitable ones */
+    .now-playing {
+    font-size: 1rem;
+    color: #FFFAFA;
+    }
+    
+    .track-name {
+    font-size: 3rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight:bold;
+    background-image: linear-gradient(100deg, #0ef, #09f36a);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+    }
+    
+    .track-artist {
+    font-size: 1.5rem;
+    color: #FFFAFA;
+    }
+    
+    /* Using flex with the row direction to
+    align items in a horizontal direction */
+    .buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    }
+    .repeat-track,
+  .random-track,
+    .playpause-track,
+    .prev-track,
+    .next-track {
+    padding: 25px;
+    opacity: 1;
+    background-image: linear-gradient(10000deg, rgb(164, 28, 4), #3409f3);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+    /* Smoothly transition the opacity */
+    transition: opacity .2s;
+    }
+    
+    /* Change the opacity when mouse is hovered */
+    .repeat-track:hover,
+    .random-track:hover,
+    .playpause-track:hover,
+    .prev-track:hover,
+    .next-track:hover {
+    opacity: 1.0;
+    }
+    
+    /* Define the slider width so that it scales properly */
+    .slider_container {
+    width: 75%;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#FFFAFA;
+    }
+    
+    /* Modify the appearance of the slider */
+    .seek_slider, .volume_slider {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 5px;
+    background: rgb(255, 255, 255);
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    }
+    
+    /* Modify the appearance of the slider thumb */
+    .seek_slider::-webkit-slider-thumb,
+    .volume_slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: rgb(14, 6, 180);
+    cursor: pointer;
+    border-radius: 50%;
+    }
+    
+    /* Change the opacity when mouse is hovered */
+    .seek_slider:hover,
+    .volume_slider:hover {
+    opacity: 1.0;
+    }
+    
+    .seek_slider {
+    width: 60%;
+    }
+    
+    .volume_slider {
+    width: 30%;
+    }
+    
+    .current-time,
+    .total-duration {
+    padding: 10px;
+    }
+    
+    i.fa-volume-down,
+    i.fa-volume-up {
+    padding: 10px;
+    }
+    
+    /* Change the mouse cursor to a pointer
+    when hovered over */
+    i.fa-play-circle,
+    i.fa-pause-circle,
+    i.fa-step-forward,
+    i.fa-step-backward {
+    cursor: pointer;
+    }
+    
+    .randomActive {
+      color: black;
+    }
+    
+    .rotate {
+      animation: rotation 8s infinite linear;
+    }
+    
+    @keyframes rotation {
+      from {
+        transform: rotate(0deg);
+      }
+    
+      to {
+        transform: rotate(359deg);
+      }
+    }
+    
+    .loader {
+      height: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .loader .stroke {
+      background: #f1f1f1;
+      height: 150%;
+      width: 10px;
+      border-radius: 50px;
+      margin: 0 5px;
+      animation: animate 1.4s linear infinite;
+    }
+    
+    @keyframes animate {
+      50% {
+        height: 20%;
+        background: #4286f4;
+      }
+    
+      100% {
+        background: #4286f4;
+        height: 100%;
+      }
+    }
+    
+    .stroke:nth-child(1) {
+      animation-delay: 0s;
+    }
+    
+    .stroke:nth-child(2) {
+      animation-delay: 0.3s;
+    }
+    
+    .stroke:nth-child(3) {
+      animation-delay: 0.6s;
+    }
+    
+    .stroke:nth-child(4) {
+      animation-delay: 0.9s;
+    }
+    
+    .stroke:nth-child(5) {
+      animation-delay: 0.6s;
+    }
+    
+    .stroke:nth-child(6) {
+      animation-delay: 0.3s;
+    }
+    
+    .stroke:nth-child(7) {
+      animation-delay: 0s;
+    }
